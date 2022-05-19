@@ -4,12 +4,14 @@ html,
 body {
   padding: 0;
   margin: 0;
+
+  overflow: hidden;
 }
 
 .main {
   height: 100vh;
   background-image: linear-gradient(to right top, #ffb6b6, #c4c4c4);
-  padding-bottom: 100px;
+  overflow: auto;
 
   /* layout */
   display: flex;
@@ -47,5 +49,33 @@ body {
 
   .main .letter-container p {
     font-size: 25px;
+  }
+}
+
+/* tablet */
+@media (max-width: 767px) and (min-width: 481px) {
+  .main .letter-container {
+    height: auto;
+    width: 500px;
+
+    margin-top: 200px;
+  }
+
+  .main .letter-container p {
+    font-size: 15px;
+  }
+}
+
+/* phone */
+@media (max-width: 480px) and (min-width: 320px) {
+  .main .letter-container {
+    height: auto;
+    width: 300px;
+
+    margin-top: 250px;
+  }
+
+  .main .letter-container p {
+    font-size: 12px;
   }
 }
